@@ -1,0 +1,514 @@
+
+/*!
+ * SAP UI development toolkit for HTML5 (SAPUI5)
+ *
+ * (c) Copyright 2009-2012 SAP AG. All rights reserved
+ */
+/* Global CSS for 'base' theme */
+
+@import "../../../../../../../Base/baseLib/baseTheme/base.less";
+
+
+// Semantic Theming Mapping
+@sapUiContentDisabledTextColor: @sapContent_DisabledTextColor;
+@sapUiFieldBackground: @sapField_Background;
+@sapUiFieldBorderColor: #BFBFBF;
+@sapUiFieldHelpBackground: @sapField_Background;
+@sapUiFieldHoverBackground: @sapField_Hover_Background;
+@sapUiFieldHoverBorderColor: @sapField_Hover_BorderColor;
+@sapUiFieldHoverHelpBackground: @sapField_Hover_HelpBackground;
+@sapUiFieldFocusBackground: @sapField_Background;
+@sapUiFieldFocusBorderColor: @sapField_Focus_BorderColor;
+@sapUiFieldFocusHelpBackground: @sapField_Background;
+@sapUiFieldReadOnlyBackground: #808080;
+@sapUiFieldReadOnlyBorderColor: @sapField_ReadOnly_BorderColor;
+@sapUiFieldReadOnlyHelpBackground: #808080;
+@sapUiFieldDisabledBackground: @sapField_Background;
+@sapUiFieldDisabledBorderColor: @sapField_BorderColor;
+@sapUiFieldDisabledHelpBackground: @sapField_Background;
+@sapUiFieldRequiredColor: @sapField_BorderColor;
+@sapUiFieldInvalidColor: #FF0000;
+@sapUiFieldInvalidBackground: #FF9A90;
+@sapUiFieldWarningColor: #FFFF00;
+@sapUiFieldWarningBackground: #FAF2B0;
+@sapUiFieldSuccessColor: @sapField_SuccessColor;
+@sapUiFieldSuccessBackground: @sapField_SuccessBackground;
+
+
+// Brand Colors
+@sapUiBrand: #F0AB00;     // SAP Gold #f0ab00
+@sapUiHighlight: #111177;
+@sapUiSelected: @sapUiHighlight;
+@sapUiActive: @sapUiHighlight;
+
+// Accent Colors
+@sapUiPurple: purple;
+@sapUiOrange: orange;
+@sapUiGreen: green;
+@sapUiBlue: blue;
+@sapUiRed: red;
+@sapUiYellow: yellow;
+
+// Base Colors
+@sapUiBase: black;
+@sapUiBaseBG: white;
+@sapUiBaseBorder: @sapUiBase;
+@sapUiBaseText: @sapUiBase;
+@sapUiBaseLine: @sapUiBase;
+
+// Background Colors
+// Grayscale Backgrounds
+@sapUiWhite: #FFFFFF;
+@sapUiExtraLightBG: @sapUiBaseBG;
+@sapUiLightBG: lightgray;
+@sapUiMediumBG: gray;
+@sapUiDarkBG: darkgray;
+@sapUiDeepBG: black;
+@sapUiBlackBG: #000000;
+
+// Tinted Backgrounds
+@sapUiHoverBG: grey;
+@sapUiMediumAltBG: grey;
+@sapUiDarkAltBG: darkgrey;
+
+// Button Background Colors
+@sapUiButtonStandardBG: @sapUiBaseBG;
+@sapUiButtonEmphasizedBG: yellow;
+@sapUiButtonNegativeBG: red;
+@sapUiButtonPositiveBG: green;
+
+// Semantic Background Colors
+@sapUiErrorBG: #FF9A90;
+@sapUiWarningBG: #FAF2B0;
+@sapUiReadOnlyBG: grey;
+
+// Text Colors
+@sapUiExtraLightText: lightgray;
+@sapUiLightText: lightgray;
+@sapUiMediumText: grey;
+@sapUiDarkText: darkgrey;
+@sapUiDeepText: black;
+@sapUiText: @sapUiBaseText; // black
+@sapUiTextInverted: @sapUiWhite;
+
+// Link
+@sapUiLink: #0000FF;
+@sapUiLinkInverted: @sapUiLink;
+@sapUiLinkVisited: #800080;               // the color for a vistited link 
+@sapUiLinkActive: #FF0000;                // the color for a link while being clicked 
+@sapUiLinkHover: #FF0000;                 // the color for a link while being hovered 
+
+// Semantic Text Colors
+@sapUiNegativeText: red;
+@sapUiPositiveText: #B5E7A8;
+
+// Grayscale Borders
+@sapUiExtraLightBorder: lightgrey;
+@sapUiLightBorder: grey;
+@sapUiMediumBorder: @sapUiBaseBorder;
+@sapUiDarkBorder: @sapUiBaseBorder;
+
+// Semantic Border Colors
+@sapUiErrorBorder: red;
+@sapUiWarningBorder: yellow;
+
+// Line Colors
+@sapUiLightLine: lightgrey;
+@sapUiMediumLine: grey;
+@sapUiEmphasizedLine: @sapUiHighlight;
+@sapUiDarkLine: darkgrey;
+
+// Table Colors
+@sapUiTableRowBG: @sapUiWhite;
+@sapUiTableRowAlternatingBG: @sapUiWhite;
+@sapUiTableRowSelectionBG: @sapUiHighlight;
+@sapUiTableRowSelectionReadOnlyBG: @sapUiHighlight;
+@sapUiTableRowHoverBG: @sapUiHoverBG;
+
+// MOBILE-specific, but still very global-like:
+@sapUiListBG: #f7f7f7;
+
+
+/* ---------------------------------------------------------------------------------------- */
+/* TMP during LESS convertion ---- to be deleted */
+@sapUiTextColor: green; /* may be required by SubstitutionRulesManager.css in inbox lib */
+@sapUiTextTitleColor: green;
+@sapUiTextSelectionColor: green;
+
+/* ---------------------------------------------------------------------------------------- */
+
+@sapUiTextDisabled: lighten(@sapUiText, 60%); // the color for disabled text
+@sapUiTextTitle: @sapUiText;  // the text color for titles of all kinds
+@sapUiTextSelection: @sapUiTextInverted; // the color for selected text
+@sapUiTextfieldBackground: @sapUiWhite; // better to have an own parameter insted of using sapUiWhite
+
+@sapUiLineHeight: 21px;
+
+@sapUiFontFamily: Arial,Helvetica,sans-serif;  // the default font
+@sapUiFontMonospaceFamily: Lucida Console;     // the default monospacefont
+@sapUiFontSize: medium;                        // the default font size
+@sapUiFontLargeSize: large;                    // TODO: might also be title font size
+@sapUiFontSmallSize: small;
+@sapUiFontHeader1Size: xx-large;
+@sapUiFontHeader2Size: x-large;
+@sapUiFontHeader3Size: @sapUiFontLargeSize;
+@sapUiFontHeader4Size: @sapUiFontSize;
+@sapUiFontHeader5Size: @sapUiFontSize;
+@sapUiFontHeader6Size: @sapUiFontSize;
+
+// SOME important control-specific parameters...
+
+@sapUiButtonBorderColor: @sapUiMediumBorder; // needed beacuse different in GR and UX
+@sapUiButtonBackgroundColor: @sapUiButtonStandardBG; // to be renamed????
+@sapUiButtonDisabledBorderColor: @sapUiMediumBorder; // needed because different in GR, HCB and UX
+@sapUiButtonDisabledBackgroundColor: @sapUiExtraLightBG; // needed, different in every theme
+@sapUiButtonHoverBorderColor: @sapUiMediumBorder; // needed beacuse different in GR and UX
+@sapUiButtonHoverBackgroundColor: @sapUiMediumBG; // needed beacuse different in GR, Platinum and UX
+@sapUiButtonActiveBorderColor: @sapUiMediumBorder; // needed beacuse different in GR and UX
+@sapUiButtonActiveBackgroundColor: @sapUiDarkBG; // needed beacuse different in GR, Platinum and UX
+@sapUiButtonEmphasizedBorderColor: @sapUiButtonBorderColor;
+@sapUiButtonEmphasizedBackgroundColor: @sapUiButtonEmphasizedBG;
+@sapUiButtonEmphasizedDisabledBorderColor: @sapUiButtonEmphasizedBorderColor;
+@sapUiButtonEmphasizedDisabledBackgroundColor: @sapUiButtonEmphasizedBackgroundColor;
+@sapUiButtonEmphasizedHoverBorderColor: @sapUiButtonHoverBorderColor;
+@sapUiButtonEmphasizedHoverBackgroundColor: @sapUiButtonHoverBackgroundColor;
+@sapUiButtonEmphasizedActiveBorderColor: @sapUiButtonActiveBorderColor;
+@sapUiButtonEmphasizedActiveBackgroundColor: @sapUiButtonActiveBackgroundColor;
+@sapUiButtonAcceptBorderColor: @sapUiButtonBorderColor; 
+@sapUiButtonAcceptBackgroundColor: @sapUiButtonPositiveBG;
+@sapUiButtonAcceptDisabledBorderColor: @sapUiButtonAcceptBorderColor;
+@sapUiButtonAcceptDisabledBackgroundColor: @sapUiButtonAcceptBackgroundColor;
+@sapUiButtonAcceptHoverBorderColor: @sapUiButtonHoverBorderColor;
+@sapUiButtonAcceptHoverBackgroundColor: @sapUiButtonHoverBackgroundColor;
+@sapUiButtonAcceptActiveBorderColor: @sapUiButtonActiveBorderColor;
+@sapUiButtonAcceptActiveBackgroundColor: @sapUiButtonActiveBackgroundColor;
+@sapUiButtonRejectBorderColor: @sapUiButtonBorderColor;
+@sapUiButtonRejectBackgroundColor: @sapUiButtonNegativeBG;
+@sapUiButtonRejectDisabledBorderColor: @sapUiButtonRejectBorderColor;
+@sapUiButtonRejectDisabledBackgroundColor: @sapUiButtonRejectBackgroundColor;
+@sapUiButtonRejectHoverBorderColor: @sapUiButtonHoverBorderColor;
+@sapUiButtonRejectHoverBackgroundColor: @sapUiButtonHoverBackgroundColor;
+@sapUiButtonRejectActiveBorderColor: @sapUiButtonActiveBorderColor;
+@sapUiButtonRejectActiveBackgroundColor: @sapUiButtonActiveBackgroundColor;
+@sapUiButtonLiteBackgroundColor: transparent;
+@sapUiToggleButtonPressedDisabledBackgroundColor: #D8D8E8;
+@sapUiToggleButtonPressedBackgroundColor: @sapUiHighlight;
+
+// semantic colors
+@sapUiPositiveBG: @sapUiPositiveText; // no positive background defined by UX, but using text color as background may be confusing
+
+// default shadow for popups 
+@sapUiShadowTint: #000;
+@sapUiShadow: 5px 5px 10px fade(@sapUiShadowTint,50%);
+/* Global CSS for 'sap_goldreflection' theme */
+
+@import "../../../../../../../Base/baseLib/sap_goldreflection/base.less";
+
+
+// Semantic Theming Mapping
+@sapUiFieldBackground: @sapField_Background;
+@sapUiFieldBorderColor: @sapField_BorderColor;
+@sapUiFieldHelpBackground: @sapField_HelpBackground;
+@sapUiFieldHoverBackground: @sapField_Hover_Background;
+@sapUiFieldHoverBorderColor: @sapField_Hover_BorderColor;
+@sapUiFieldHoverHelpBackground: @sapField_Hover_HelpBackground;
+@sapUiFieldFocusBackground: @sapField_Focus_Background;
+@sapUiFieldFocusBorderColor: @sapField_Focus_BorderColor;
+@sapUiFieldFocusHelpBackground: @sapField_Focus_HelpBackground;
+@sapUiFieldReadOnlyBackground: @sapField_ReadOnly_Background;
+@sapUiFieldReadOnlyBorderColor: @sapField_ReadOnly_BorderColor;
+@sapUiFieldReadOnlyHelpBackground: @sapField_ReadOnly_HelpBackground;
+@sapUiFieldDisabledBackground: @sapField_Disabled_Background;
+@sapUiFieldDisabledBorderColor: @sapField_Disabled_BorderColor;
+@sapUiFieldDisabledHelpBackground: @sapField_Disabled_HelpBackground;
+@sapUiFieldRequiredColor: @sapField_RequiredColor;
+@sapUiFieldInvalidColor: @sapField_InvalidColor;
+@sapUiFieldInvalidBackground: @sapField_InvalidBackground;
+@sapUiFieldWarningColor: @sapField_WarningColor;
+@sapUiFieldWarningBackground: @sapField_WarningBackground;
+@sapUiFieldSuccessColor: @sapField_SuccessColor;
+@sapUiFieldSuccessBackground: @sapField_SuccessBackground;
+
+
+// Brand Colors
+
+@sapUiBrand: @sapBrandColor;			// "Quick" default #F0AB00
+
+@sapUiHighlight: @sapHighlightColor;			// "Quick" default #007DC0
+
+@sapUiUx3ShellHeaderColor: @sapShellHeaderColor;			// "Quick" default #000
+
+
+// Accent Colors
+
+@sapUiPurple: #AB218E;
+@sapUiOrange: #F27020;
+@sapUiGreen: #008A3B;
+@sapUiBlue: #007CC0;
+@sapUiRed: #E52929;
+@sapUiYellow: #F0AB00;
+
+
+// Base Colors
+
+@sapUiBase: darken(@sapBaseColor,37);			// "Quick" default #7F7F7F
+
+@sapUiBaseBG: darken(@sapBackgroundColor,45);			// "Quick" default #7F7F7F
+
+@sapUiBaseBorder: hsl(hue(@sapUiBase), saturation(@sapUiBase), lightness(@sapUiBase));	// default: s:0%, l:50%
+
+@sapUiBaseText: @sapTextColor;			// "Quick" default #000000
+
+@sapUiBaseLine: hsl(hue(@sapUiBase), saturation(@sapUiBase), lightness(@sapUiBase));		// default: s:0%, l:50%
+
+
+// Background Colors
+// Grayscale Backgrounds
+
+@sapUiWhite: #FFFFFF;
+
+@sapUiExtraLightBG: lighten(@sapUiBaseBG, 45%);			// #f2f2f2, Canvas Background
+
+@sapUiLightBG: lighten(@sapBaseColor, 3.2);			// #e5e5e5
+
+@sapUiMediumBG: @sapBaseColor;			// "Quick" default #dddddd
+
+@sapUiDarkBG: darken(@sapBaseColor, 46.7);			// #666666
+
+@sapUiDeepBG: darken(@sapBaseColor, 69.5);			// #2c2c2c
+
+
+
+// Tinted Backgrounds
+
+@sapUiHoverBG: mix(@sapUiHighlight, @sapUiWhite, 10.35%);
+
+@sapUiMediumAltBG: spin(hsl(hue(@sapUiHighlight), 16%, 76%), 9);								// #b8c2cc, Scrollbar thumb
+
+@sapUiDarkAltBG: spin(mix(@sapUiHighlight, darken(@sapUiDarkBG, 1.2%), 3%), 9);	// #606366;
+
+
+// Button Background Colors
+
+@sapUiButtonStandardBG: hsl(hue(@sapUiBase), 0%, 88.5%); // #e2e2e2;
+
+@sapUiButtonEmphasizedBG: #FDC411;
+
+@sapUiButtonNegativeBG: @sapUiRed;
+
+@sapUiButtonPositiveBG: @sapUiGreen;
+
+
+// Semantic Background Colors
+
+@sapUiErrorBG: mix(@sapUiRed, @sapUiWhite, 15%);    // #fbdfdf
+
+@sapUiWarningBG: #FFFCB5;
+
+@sapUiPositiveBG: mix(@sapUiGreen, @sapUiWhite, 12%);   // #e0f1e7
+
+@sapUiReadOnlyBG: #EAEDF0;
+
+
+// Text Colors
+
+@sapHighlightTextColor: contrast(@sapHighlightColor, @sapTextColor, #fff);
+@sapUiHighlightText: @sapHighlightTextColor;
+
+@sapUiExtraLightText: #707070;
+
+@sapUiLightText: lighten(@sapUiBaseText, 40%);		// #666666;
+
+@sapUiMediumText: lighten(@sapUiBaseText, 26.5%);	// #444444;
+
+@sapUiDarkText: lighten(@sapUiBaseText, 20%);			// #333333;
+
+@sapUiDeepText: #222222;
+
+//@sapUiText: @sapUiBaseText; // black - already defined
+
+@sapUiTextInverted: @sapUiWhite;
+
+
+// Link
+
+@sapUiLink: @sapLinkColor;			// "Quick" default #00669C
+
+@sapUiLinkInverted: #1BB1FF;
+
+@sapUiLinkVisited: @sapUiLink;
+
+@sapUiLinkActive: @sapUiLink;
+
+@sapUiLinkHover: @sapUiLink; // the color for a link while being hovered
+
+
+// Semantic Text Colors
+
+@sapUiNegativeText: darken(@sapUiRed, 8%);   // #cc1919
+
+@sapUiPositiveText: darken(@sapUiGreen, 3.5%);   // #007833
+
+// Grayscale Borders
+@sapUiExtraLightBorder: lighten(@sapUiBaseBorder, 39.7%);	// #e5e5e5
+
+@sapUiLightBorder: lighten(@sapUiBaseBorder, 36.5%);			// #dddddd
+
+@sapUiMediumBorder: lighten(@sapUiBaseBorder, 30%);				// #cccccc
+
+@sapUiDarkBorder: lighten(@sapUiBaseBorder, 25%);					// #bfbfbf
+
+
+// Semantic Border Colors
+
+@sapUiErrorBorder: darken(@sapUiRed, 8%);   // #cc1919;
+
+@sapUiWarningBorder: #D99900;
+
+@sapUiPositiveBorder: darken(@sapUiGreen, 3.5%);   // #007833
+
+
+// Line Colors
+
+@sapUiLightLine: lighten(@sapUiBaseLine, 30%);	// #cccccc
+
+@sapUiMediumLine: lighten(@sapUiBaseLine, 10%);	// #999999
+
+@sapUiEmphasizedLine: @sapUiHighlight;
+
+@sapUiDarkLine: darken(@sapUiBaseLine, 30%);		// #333333
+
+
+// Table Colors
+
+@sapUiTableRowAlternatingBG: #eff7fb;
+
+@sapUiTableRowSelectionBG: #d1e9f4;
+
+@sapUiTableRowSelectionReadOnlyBG: #c9e1ed;
+
+
+/* ---------------------------------------------------------------------------------------- */
+
+@sapTitleColor: contrast(@sapBaseColor, lighten(@sapTextColor,20), #fff);
+@sapUiTextTitle: @sapTitleColor;			// was "Quick" default #333333
+
+@sapUiBackgroundImage: @sapBackgroundImage;			// "Quick"
+
+@sapUiFontFamily: Arial, Helvetica, sans-serif;
+
+@sapUiFontSize: 12px;
+
+@sapUiFontLargeSize: 13px;
+@sapUiFontSmallSize: 11px;
+@sapUiFontHeader1Size: 26px;
+@sapUiFontHeader2Size: 20px;
+@sapUiFontHeader3Size: 18px;
+@sapUiFontHeader4Size: 16px;
+@sapUiFontHeader5Size: 14px;
+@sapUiFontHeader6Size: @sapUiFontLargeSize;
+
+@sapUiLineHeight: 18px;
+
+// SOME important control-specific parameters...
+
+@sapUiButtonBorderColor: darken(@sapUiButtonStandardBG, 25%);
+@sapUiButtonDisabledBorderColor: lighten(@sapUiButtonBorderColor, 11.2%); // #BFBFBF
+@sapUiButtonDisabledBackgroundColor: @sapUiButtonStandardBG;
+@sapUiButtonHoverBorderColor: darken(@sapUiHighlight, 15%); //#00689E
+@sapUiButtonHoverBackgroundColor: @sapUiHighlight;
+@sapUiButtonActiveBorderColor: darken(@sapUiDarkBG, 20%); // #333333
+@sapUiButtonActiveBackgroundColor: @sapUiDarkBG;
+@sapUiButtonEmphasizedBorderColor: darken(@sapUiButtonEmphasizedBG, 25%);
+@sapUiButtonEmphasizedHoverBorderColor: darken(@sapUiButtonEmphasizedBG, 35%); // #444444
+@sapUiButtonEmphasizedHoverBackgroundColor: lighten(@sapUiButtonEmphasizedBG, 7%);
+@sapUiButtonEmphasizedActiveBorderColor: @sapUiButtonEmphasizedHoverBorderColor;
+@sapUiButtonEmphasizedActiveBackgroundColor: darken(@sapUiButtonEmphasizedBG, 7%); //#EFAB00
+@sapUiButtonAcceptBorderColor: darken(@sapUiButtonPositiveBG, 10%); //#196600
+@sapUiButtonAcceptHoverBorderColor: darken(@sapUiButtonPositiveBG, 35%); //#104000
+@sapUiButtonAcceptHoverBackgroundColor: @sapUiButtonPositiveBG;
+@sapUiButtonAcceptActiveBorderColor: @sapUiButtonAcceptHoverBorderColor;
+@sapUiButtonAcceptActiveBackgroundColor: darken(@sapUiButtonPositiveBG, 5%); //#1D7300
+@sapUiButtonRejectBorderColor: darken(@sapUiButtonNegativeBG, 10%); //#A60000
+@sapUiButtonRejectHoverBorderColor: darken(@sapUiButtonNegativeBG, 35%); // #550000
+@sapUiButtonRejectHoverBackgroundColor: @sapUiButtonNegativeBG;
+@sapUiButtonRejectActiveBorderColor: @sapUiButtonRejectHoverBorderColor;
+@sapUiButtonRejectActiveBackgroundColor: darken(@sapUiButtonNegativeBG, 5%); // #B20000
+@sapUiButtonLiteBackgroundColor: transparent;
+@sapUiButtonLiteTextColor: darken(@sapUiHighlight, 7%); //#00689E
+@sapUiToggleButtonHoverBorderColor: @sapUiHighlight;
+@sapUiToggleButtonPressedBackgroundColor: @sapUiHighlight;
+@sapUiToggleButtonPressedDisabledBackgroundColor: lighten(desaturate(@sapUiHighlight, 80%),46%); // #CDD6DB
+@sapUiToggleButtonPressedBorderColor: @sapUiButtonHoverBorderColor;
+@sapUiToggleButtonPressedHoverBackgroundColor: darken(@sapUiHighlight, 7%); // #0078BB
+@sapUiToggleButtonPressedHoverBorderColor: darken(@sapUiHighlight, 7%); // #0078BB
+
+// semantic colors
+// avoid changing the color hue in specific themes - slight adaptations are fine, though
+@sapUiPositiveBG: lighten(desaturate(@sapUiPositiveText, 50%), 60%); // #BAEE9A no positive background defined by UX
+
+// shadow for popups
+@sapUiShadow: 0px 4px 17px rgba(0, 0, 0, 0.4);
+
+//images for shell
+
+@sapUiUx3ShellBackgroundImageURL: @sapBackgroundImage;			// "Quick"
+
+@sapUiUx3ShellHeaderImageURL: ~"";
+
+@sapUiUx3ShellApplicationImageURL: @sapCompanyLogo;			// "Quick"
+.defaultSkin {
+	color: @sapUiText;
+	background-color:  @sapUiExtraLightBG;
+	font-family: @sapUiFontFamily;
+	font-size:  @sapUiFontSize;
+}
+
+.sapUiRTE {
+	display: inline-block;
+}
+
+html[dir=rtl] .sapUiRTE .defaultSkin table {
+	direction: rtl;
+}
+
+/* Styling TinyMCE */
+.sapUiRTE .defaultSkin table.mceToolbar {
+	margin-left: 5px;
+}
+
+.sapUiRTE .defaultSkin .mceIcon,
+.sapUiRTE .defaultSkin .mceSplitButton span.mceAction {
+	background-image: url("icons.png");
+}
+
+/* bugfix for IE8 with certain zoom factors */
+html[data-sap-ui-browser="ie8"] .sapUiRTE .defaultSkin .mceIcon.mce_undo {
+	width: 19px;
+	margin-right: 1px;
+}
+	
+.sapUiRTE .defaultSkin table.mceLayout tr.mceFirst > td.mceFirst {
+	background-color: @sapUiExtraLightBG;
+	border-top: 1px solid @sapUiMediumBorder;
+}
+
+.sapUiRTE .defaultSkin td.mceIframeContainer {
+	border-top: 1px solid @sapUiMediumBorder;
+}
+
+.sapUiRTE .defaultSkin.mceEditor table.mceLayout {
+	border-color: @sapUiMediumBorder;
+}
+
+.sapUiRTE .defaultSkin table.mceLayout tr.mceLast td.mceLast {
+	border-bottom: 1px solid @sapUiMediumBorder;
+}
+
+
+.sapUiRTE .defaultSkin table.mceLayout tr.mceFirst td,
+.sapUiRTE .defaultSkin table {
+	background-color: transparent;
+}
+ 
+
