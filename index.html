@@ -97,13 +97,14 @@
 			// data access
 			function getServiceUrl(sServiceUrl) {
 				var sOrigin = window.location.protocol + "//" + window.location.hostname
-						+ (window.location.port ? ":" + window.location.port : "");
+						+ (window.location.port ? ":" + window.location.port : "8080");
 				if (!jQuery.sap.startsWith(sServiceUrl, sOrigin)) {
 					return "proxy/" + sServiceUrl.replace("://", "/");
 				} else {
 					return sServiceUrl.substring(sOrigin.length);
 				}
 			};
+
 			var sServiceUrl = "http://services.odata.org/Northwind/Northwind.svc/";
 			sServiceUrl = getServiceUrl(sServiceUrl);
 			var busyDialog = (busyDialog) ? busyDialog : new sap.m.BusyDialog('busyDialog',{text:'Loading Northwind Data', title: 'Loading'});
