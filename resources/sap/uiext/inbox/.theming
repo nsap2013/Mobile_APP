@@ -1,7 +1,0 @@
-{
-  "sEntity": "Library",
-  "sId": "sap/uiext/inbox",
-  "sLabel": "Inbox",
-  "sVendor": "SAP",
-  "oExtends": "UI5.sap/ui/core"
-}
