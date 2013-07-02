@@ -96,14 +96,10 @@
 
 			// data access
 			function getServiceUrl(sServiceUrl) {
-				var sOrigin = window.location.protocol + "//" + window.location.hostname
-						+ (window.location.port ? ":" + window.location.port : "");
-				if (!jQuery.sap.startsWith(sServiceUrl, sOrigin)) {
-					return "proxy/" + sServiceUrl.replace("://", "/");
-				} else {
+				{
 					return sServiceUrl.substring(sOrigin.length);
-				}
-			};
+				};
+			
 
  
 
